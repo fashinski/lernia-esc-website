@@ -1,0 +1,649 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/roboto-regular-400.woff2?v=2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/roboto-italic-400.woff2?v=2") format("woff2");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --navy: #011827;
+  --red: #e3170a;
+  --grey: #b6bdb5;
+  --blue: #36769d;
+  --light-blue: #8acfe5;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  color: #000;
+  background: var(--white);
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.171875;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+blockquote,
+ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 12px 18px;
+  color: var(--navy);
+  background: var(--light-blue);
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* The phone layout comes first. Wider screens get their changes below. */
+.site-header {
+  min-height: 144px;
+  padding: 26px 27px 35px;
+  color: var(--white);
+  background: var(--navy);
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.site-header__logo {
+  width: 128px;
+  height: 82px;
+  flex-shrink: 0;
+}
+
+.site-header__title {
+  margin-top: -1px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.site-header__title span {
+  display: block;
+}
+
+.site-nav {
+  display: none;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__image {
+  width: 100%;
+  height: 274px;
+  object-fit: cover;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 308px;
+  max-width: 100%;
+  min-height: 66px;
+  padding: 15px 14px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button--primary {
+  color: var(--white);
+  background: var(--red);
+}
+
+.button--secondary {
+  color: var(--navy);
+  background: var(--light-blue);
+}
+
+.button--outline {
+  border-color: var(--light-blue);
+  color: var(--light-blue);
+  background: transparent;
+}
+
+.button:hover {
+  filter: brightness(0.94);
+}
+
+.challenge-actions {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 30px;
+  padding-inline: 30px 20px;
+}
+
+.challenge-actions--hero {
+  margin-top: 37px;
+}
+
+.challenge-actions__online {
+  width: auto;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  color: var(--blue);
+  background: none;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.testimonials {
+  margin: 68px 20px 0 21px;
+}
+
+.testimonial {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.testimonial__avatar {
+  width: 73.336px;
+  height: 72px;
+  margin-top: 3px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial__body {
+  min-width: 0;
+  flex: 1;
+}
+
+.testimonial blockquote {
+  font-size: 24px;
+  font-style: italic;
+  line-height: 28px;
+}
+
+.testimonial__attribution {
+  margin-top: 6px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.testimonial--extra {
+  display: none;
+}
+
+.challenges {
+  margin-top: 105px;
+  padding-bottom: 57px;
+}
+
+.challenges__title {
+  padding-inline: 20px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: center;
+}
+
+/* Only this row scrolls sideways, so the rest of the page stays in place. */
+.challenge-list {
+  display: flex;
+  gap: 38px;
+  margin: 34px 0 0;
+  padding: 10px max(20px, calc((100% - 376px) / 2));
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: max(20px, calc((100% - 376px) / 2));
+}
+
+.challenge-list::-webkit-scrollbar {
+  display: none;
+}
+
+.challenge-list > li {
+  width: min(363px, calc(100vw - 40px));
+  min-width: 0;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.challenge-card {
+  min-height: 446px;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+  overflow: hidden;
+}
+
+.challenge-card__image {
+  width: 100%;
+  height: 219px;
+  object-fit: cover;
+}
+
+.challenge-card__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 227px;
+  padding: 12px 17px;
+}
+
+.challenge-card__title {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.challenge-card__meta {
+  display: flex;
+  align-items: center;
+  min-height: 26px;
+  margin-top: -3px;
+}
+
+.rating {
+  display: flex;
+  gap: 0.887px;
+  margin-left: -5px;
+  flex-shrink: 0;
+}
+
+.rating-star {
+  display: grid;
+  place-items: center;
+  width: 23.076px;
+  height: 26px;
+}
+
+.challenge-card__participants {
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.challenge-card__description {
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.button--small {
+  width: 179.281px;
+  border-radius: 8px;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 10px 12px;
+  align-self: flex-end;
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.challenges .challenge-actions {
+  margin-top: 37px;
+}
+
+.story {
+  min-height: 500px;
+  padding: 95px 20px 90px;
+  color: var(--white);
+  background: var(--navy);
+  text-align: center;
+}
+
+.story__text {
+  max-width: 439px;
+  min-height: 230px;
+  margin-inline: auto;
+  font-size: 28px;
+  line-height: 32.8px;
+}
+
+.story .button {
+  margin-top: 18px;
+}
+
+.feature__picture {
+  display: block;
+  min-width: 0;
+}
+
+.feature__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.feature__content {
+  padding: 30px 20px 64px;
+}
+
+.feature__title {
+  min-height: 106px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.feature__description {
+  min-height: 112px;
+  font-size: 24px;
+  line-height: 28.125px;
+}
+
+.feature__content .button {
+  margin-top: 25px;
+}
+
+.feature--reverse .feature__description {
+  margin-top: 25px;
+}
+
+.feature--reverse .feature__content {
+  padding-bottom: 98px;
+}
+
+.site-footer {
+  min-height: 566px;
+  padding: 64px 21px 66px;
+  color: var(--white);
+  background: var(--navy);
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: 39px;
+  margin-inline: auto;
+}
+
+.site-footer__heading {
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.site-footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer__nav li:nth-child(4) {
+  margin-top: 21px;
+}
+
+/* There is room for navigation, two reviews and side-by-side sections here. */
+@media (min-width: 800px) {
+  .site-header {
+    min-height: 216px;
+    padding-bottom: 22px;
+  }
+
+  .site-header__brand {
+    align-items: flex-end;
+    gap: 24px;
+  }
+
+  .site-header__title {
+    margin-top: 0;
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  .site-header__title span {
+    display: inline;
+  }
+
+  .site-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 920px;
+    margin: 58px auto 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .site-nav a {
+    text-decoration: none;
+  }
+
+  .site-nav a:hover,
+  .site-nav li:last-child a {
+    color: var(--light-blue);
+  }
+
+  .hero__image {
+    height: 468px;
+  }
+
+  .challenge-actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 17px;
+    padding-inline: 24px;
+  }
+
+  .challenge-actions--hero {
+    position: relative;
+    margin-top: -32px;
+  }
+
+  .challenge-actions__online {
+    width: 308px;
+    min-height: 66px;
+    padding: 15px 14px;
+    border: 2px solid transparent;
+    color: var(--white);
+    background: var(--red);
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration: none;
+  }
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1060px;
+    margin: 107px auto 0;
+    padding-inline: 24px;
+  }
+
+  .testimonial {
+    gap: 16px;
+  }
+
+  .testimonial--extra {
+    display: flex;
+  }
+
+  .testimonial__avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .testimonial__attribution {
+    max-width: 285px;
+    margin-top: 15px;
+  }
+
+  .challenges {
+    margin-top: 108px;
+    padding-bottom: 87px;
+  }
+
+  .challenges__title {
+    padding-left: 36px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .challenge-list {
+    margin-top: 77px;
+  }
+
+  .challenge-card__participants {
+    margin-right: -6px;
+    margin-left: auto;
+  }
+
+  .challenges .challenge-actions {
+    margin-top: 77px;
+  }
+
+  .story {
+    padding-top: 123px;
+    padding-bottom: 142px;
+  }
+
+  .story__text {
+    max-width: 632px;
+    min-height: 131px;
+  }
+
+  .story .button {
+    margin-top: 38px;
+  }
+
+  .features {
+    margin-bottom: 183px;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature__image {
+    height: 100%;
+    min-height: 460px;
+  }
+
+  .feature__content,
+  .feature--reverse .feature__content {
+    width: calc(100% - 64px);
+    max-width: 416px;
+    min-height: 460px;
+    padding: 60px 0 66px;
+    justify-self: center;
+  }
+
+  .feature--reverse .feature__picture {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .feature--reverse .feature__content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .feature__description {
+    margin-top: 25px;
+  }
+
+  .site-footer {
+    min-height: 467px;
+    padding: 146px 24px;
+  }
+
+  .site-footer__inner {
+    grid-template-columns: minmax(0, 1fr) 200px 200px;
+    gap: 16px;
+    max-width: 1064px;
+  }
+
+  .site-footer__about {
+    max-width: 416px;
+  }
+}
+
+/* All three cards fit without scrolling once the screen is wide enough. */
+@media (min-width: 1180px) {
+  .testimonials {
+    padding-inline: 0;
+  }
+
+  .challenge-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 42.5px;
+    width: calc(100% - 48px);
+    max-width: 1174px;
+    margin-inline: auto;
+    padding-inline: 0;
+    overflow: visible;
+  }
+
+  .challenge-list > li {
+    width: auto;
+  }
+}

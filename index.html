@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore online and on-site challenges at Hacker Escape Rooms. Play with friends or bring your team together.">
+  <title>[Esc] Hacker Escape Rooms</title>
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- The same header works on a phone and on a wider screen. -->
+  <header class="site-header">
+    <div class="site-header__brand">
+      <img class="site-header__logo" src="assets/images/logo.svg" alt="[Esc]" width="128" height="82">
+      <h1 class="site-header__title"><span>Hacker</span> <span>Escape</span> <span>Rooms</span></h1>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul class="site-nav">
+        <li><a href="#online">Play online</a></li>
+        <li><a href="#on-site">Play on-site</a></li>
+        <li><a href="#story">The story</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="hero">
+      <picture>
+        <source media="(min-width: 800px)" srcset="assets/images/hero-desktop.png">
+        <img class="hero__image" src="assets/images/hero-mobile.png" alt="A hacker at a computer" width="480" height="274" fetchpriority="high">
+      </picture>
+    </div>
+
+    <!-- CSS changes the order and look of these links on mobile. -->
+    <div class="challenge-actions challenge-actions--hero" aria-label="Choose how to play">
+      <a class="button button--primary challenge-actions__online" href="#online">Online challenges</a>
+      <a class="button button--secondary" href="#on-site">On-site challenges</a>
+    </div>
+
+    <section class="testimonials" aria-label="Customer reviews">
+      <figure class="testimonial">
+        <img class="testimonial__avatar" src="assets/images/customer.png" alt="" width="96" height="96">
+        <figcaption class="testimonial__body">
+          <blockquote>
+            <p>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it</p>
+          </blockquote>
+          <p class="testimonial__attribution">John Doe, visited us in September 2021</p>
+        </figcaption>
+      </figure>
+      <figure class="testimonial testimonial--extra">
+        <img class="testimonial__avatar" src="assets/images/customer.png" alt="" width="96" height="96">
+        <figcaption class="testimonial__body">
+          <blockquote>
+            <p>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it</p>
+          </blockquote>
+          <p class="testimonial__attribution">John Doe, visited us in September 2021</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="challenges" id="challenges" aria-labelledby="challenges-title">
+      <h2 class="challenges__title" id="challenges-title">Popular challenges right now</h2>
+
+      <!-- All three rooms stay in the list; small screens can scroll sideways. -->
+      <ul class="challenge-list" tabindex="0" aria-label="Popular challenges. Scroll horizontally to see more rooms.">
+        <li>
+          <article class="challenge-card" aria-labelledby="room-one-title">
+            <img class="challenge-card__image" src="assets/images/challenge.png" alt="" width="363" height="219" loading="lazy">
+            <div class="challenge-card__body">
+              <h3 class="challenge-card__title" id="room-one-title">Title of room (on-site)</h3>
+              <div class="challenge-card__meta">
+                <div class="rating" role="img" aria-label="4 out of 5 stars">
+                  <span class="rating-star"><img src="assets/images/star-first.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-outline-first.svg" alt=""></span>
+                </div>
+                <p class="challenge-card__participants">2-6 participants</p>
+              </div>
+              <p class="challenge-card__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
+              <a class="button button--primary button--small" href="#contact">Book this room</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="challenge-card" aria-labelledby="room-two-title">
+            <img class="challenge-card__image" src="assets/images/challenge.png" alt="" width="363" height="219" loading="lazy">
+            <div class="challenge-card__body">
+              <h3 class="challenge-card__title" id="room-two-title">Title of room (on-site)</h3>
+              <div class="challenge-card__meta">
+                <div class="rating" role="img" aria-label="4 out of 5 stars">
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-outline.svg" alt=""></span>
+                </div>
+                <p class="challenge-card__participants">2-6 participants</p>
+              </div>
+              <p class="challenge-card__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
+              <a class="button button--primary button--small" href="#contact">Book this room</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="challenge-card" aria-labelledby="room-three-title">
+            <img class="challenge-card__image" src="assets/images/challenge.png" alt="" width="363" height="219" loading="lazy">
+            <div class="challenge-card__body">
+              <h3 class="challenge-card__title" id="room-three-title">Title of room (on-site)</h3>
+              <div class="challenge-card__meta">
+                <div class="rating" role="img" aria-label="4 out of 5 stars">
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-filled.svg" alt=""></span>
+                  <span class="rating-star"><img src="assets/images/star-outline.svg" alt=""></span>
+                </div>
+                <p class="challenge-card__participants">2-6 participants</p>
+              </div>
+              <p class="challenge-card__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
+              <a class="button button--primary button--small" href="#contact">Book this room</a>
+            </div>
+          </article>
+        </li>
+      </ul>
+
+      <div class="challenge-actions" aria-label="More ways to play">
+        <a class="button button--primary challenge-actions__online" href="#online">Online challenges</a>
+        <a class="button button--secondary" href="#on-site">On-site challenges</a>
+      </div>
+    </section>
+
+    <!-- These placeholder words are kept exactly as they appear in the design. -->
+    <section class="story" id="story" aria-label="Our story">
+      <p class="story__text">Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
+      <a class="button button--outline" href="#about">Read the full story</a>
+    </section>
+
+    <section class="features" aria-label="Play together">
+      <article class="feature" id="on-site" aria-labelledby="team-title">
+        <picture class="feature__picture">
+          <source media="(min-width: 800px)" srcset="assets/images/team-desktop.png">
+          <img class="feature__image" src="assets/images/team-mobile.png" alt="A group working together around computers" width="480" height="300" loading="lazy">
+        </picture>
+        <div class="feature__content">
+          <h2 class="feature__title" id="team-title">Play with your friends or build your team stronger at work</h2>
+          <p class="feature__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
+          <a class="button button--primary" href="#contact">Book on-site today</a>
+        </div>
+      </article>
+      <article class="feature feature--reverse" id="online" aria-labelledby="online-title">
+        <picture class="feature__picture">
+          <source media="(min-width: 800px)" srcset="assets/images/online-desktop.png">
+          <img class="feature__image" src="assets/images/online-mobile.png" alt="A woman playing a game at a computer" width="480" height="300" loading="lazy">
+        </picture>
+        <div class="feature__content">
+          <h2 class="feature__title" id="online-title">Play online or visit our venue for one of our 25 escape rooms</h2>
+          <p class="feature__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
+          <a class="button button--primary" href="#challenges">See all challenges</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- The footer links reuse the sections already on this static homepage. -->
+  <footer class="site-footer" id="contact">
+    <div class="site-footer__inner">
+      <div class="site-footer__about" id="about">
+        <h2 class="site-footer__heading">[Esc] Hacker Escape Rooms</h2>
+        <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
+      </div>
+      <nav class="site-footer__nav" aria-labelledby="site-map-title">
+        <h2 class="site-footer__heading" id="site-map-title">Site map</h2>
+        <ul>
+          <li><a href="#story">The Story</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#contact">Legal</a></li>
+          <li><a href="#online">Play online</a></li>
+          <li><a href="#on-site">Play on-site</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer__social" aria-labelledby="social-title">
+        <h2 class="site-footer__heading" id="social-title">Follow us on</h2>
+        <ul>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+          <li><a href="https://twitter.com/">Twitter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
