@@ -28,7 +28,6 @@ There are no npm packages to install and no build command. You can also open `in
 - `style.css` — shared styles, mobile layout and media queries.
 - `assets/images/` — supplied photos and SVG artwork.
 - `assets/fonts/` — local font files and their licences.
-- `REPORT.md` — my explanation of the tools and structure.
 
 
 ## Checks
