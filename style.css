@@ -60,6 +60,7 @@ a {
 }
 
 a:focus-visible,
+button:focus-visible,
 [tabindex]:focus-visible {
   outline: 3px solid var(--blue);
   outline-offset: 5px;
@@ -82,6 +83,7 @@ a:focus-visible,
 
 /* The phone layout comes first. Wider screens get their changes below. */
 .site-header {
+  position: relative;
   min-height: 144px;
   padding: 26px 27px 35px;
   color: var(--white);
@@ -115,6 +117,140 @@ a:focus-visible,
   display: none;
   padding: 0;
   list-style: none;
+}
+
+/* These buttons use the original icons from Figma. */
+.menu-toggle,
+.mobile-menu__close {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  color: var(--white);
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  top: 22px;
+  right: 20px;
+  width: 51px;
+}
+
+.menu-toggle[hidden] {
+  display: none;
+}
+
+/* The outer dialog stays against all four edges of the window. */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--white);
+  background: transparent;
+  overflow: hidden;
+}
+
+.mobile-menu::backdrop {
+  background: rgb(255 255 255 / 50%);
+}
+
+.mobile-menu__panel {
+  position: absolute;
+  inset: 23px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 90px 16px 154px;
+  background: var(--navy);
+  box-shadow: 0 0 20px rgb(0 0 0 / 40%);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.mobile-menu__close {
+  top: 23px;
+  right: 23px;
+  width: 44px;
+}
+
+.mobile-menu nav {
+  margin-block: auto;
+  flex-shrink: 0;
+}
+
+.mobile-menu__links {
+  display: grid;
+  gap: 50px;
+  padding: 0;
+  list-style: none;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center;
+}
+
+.mobile-menu__links a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.mobile-menu__links a:hover {
+  color: var(--light-blue);
+}
+
+.mobile-menu :focus-visible,
+.menu-toggle:focus-visible {
+  outline-color: var(--light-blue);
+}
+
+/* Hold the page in place, including when the menu opens after scrolling. */
+html.menu-open {
+  overflow: hidden;
+}
+
+.menu-open body {
+  position: fixed;
+  top: var(--menu-scroll-top);
+  width: 100%;
+}
+
+/* In the video the white layer appears before the panel. Closing is instant. */
+.mobile-menu[open]::backdrop {
+  animation: menu-backdrop-in 200ms ease-out both;
+}
+
+.mobile-menu[open] .mobile-menu__panel {
+  animation: menu-panel-in 200ms ease-out 150ms both;
+}
+
+.mobile-menu[open] .mobile-menu__close {
+  animation: menu-backdrop-in 100ms ease-out 250ms both;
+}
+
+@keyframes menu-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes menu-panel-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu[open]::backdrop,
+  .mobile-menu[open] .mobile-menu__panel,
+  .mobile-menu[open] .mobile-menu__close {
+    animation: none;
+  }
 }
 
 .hero__image {
@@ -440,6 +576,11 @@ a:focus-visible,
 
 /* There is room for navigation, two reviews and side-by-side sections here. */
 @media (min-width: 800px) {
+  .menu-toggle,
+  .mobile-menu {
+    display: none;
+  }
+
   .site-header {
     min-height: 216px;
     padding-bottom: 22px;
