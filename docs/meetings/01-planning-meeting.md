@@ -50,11 +50,4 @@ The group said that each member should submit the same planning answers individu
 
 The assignment also requires everyone to write JavaScript and commit their own code to the shared repository. Each person must provide a link to their own pull request and a pull request they reviewed. The final submission includes the GitHub Pages link, repository link, and meeting notes. A short personal reflection is also needed for VG.
 
-## Follow-up items
 
-- Confirm Ashkan's repository link and make sure everyone has access.
-- Write down the calendar dates for the Tuesday meetings.
-- Eli and Natan need to agree on how the booking steps connect and which data is passed between them.
-- Viktor and Ashkan need to agree on how their filter parts work together, including the "No matching challenges" message.
-
-These follow-up items describe details still to settle; they were not additional task assignments in the submitted decision.
