@@ -2,11 +2,11 @@
 
 **Project:** [Esc] Hacker Escape Rooms
 
-**Meeting date:** Not stated in the supplied transcript.
+**Meeting date:**261011.
 
 **Participants:** Henry Nguyen, Eli Fadi, Viktor Ekström, Ashkan Baharlooe, and Natan Zemichael Yacob.
 
-These notes are based on the first meeting transcript and the final decisions sent to the teacher. The final decisions clarify the names and task split discussed in the meeting.
+These notes are based on the first meeting. The final decisions clarify the names and task split discussed in the meeting.
 
 ## What we discussed
 
@@ -49,5 +49,7 @@ Ashkan's repository link was not included in the supplied transcript or final de
 The group said that each member should submit the same planning answers individually in ItsLearning.
 
 The assignment also requires everyone to write JavaScript and commit their own code to the shared repository. Each person must provide a link to their own pull request and a pull request they reviewed. The final submission includes the GitHub Pages link, repository link, and meeting notes. A short personal reflection is also needed for VG.
+
+Eli Fadi.
 
 
