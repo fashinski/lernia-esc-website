@@ -6,7 +6,7 @@
 
 **Participants:** Henry Nguyen, Eli Fadi, Viktor Ekström, Ashkan Baharlooe, and Natan Zemichael Yacob.
 
-These notes are based on the first meeting. The final decisions clarify the names and task split discussed in the meeting.
+These notes are based on the first meeting.
 
 ## What we discussed
 
