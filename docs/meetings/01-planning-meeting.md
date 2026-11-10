@@ -32,7 +32,6 @@ We will meet every Tuesday at 10:00 to check progress, discuss problems, and agr
 
 If someone needs to change a meeting time, they should tell the group in advance. We will keep notes from every group meeting for the submission.
 
-The submitted decision gives the weekly day and time but does not list the calendar dates. The group still needs to write down the exact dates, as requested by the teacher.
 
 ## Communication
 
