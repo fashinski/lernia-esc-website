@@ -39,7 +39,7 @@ We will use the Slack group chat for communication between meetings. We can ask 
 
 ## Shared repository
 
-We will start from Ashkan's existing repository. Members shared, or were asked to share, their GitHub usernames so they could be given access.
+We will start from Ashkan's existing repository. We shared our GitHub usernames so could be given access.
 
 
 ## Submission and teamwork
