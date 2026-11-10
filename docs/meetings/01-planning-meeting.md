@@ -24,7 +24,7 @@ Using GitHub issues and a project board was suggested for keeping track of tasks
 | Eli | Build booking steps 1 and 2. Open the booking dialog, let the user choose a date, and request available times from the API. Then collect the user's name, email, available time, and number of participants. |
 | Natan | Build booking step 3: show the thank-you message and let the user close the dialog and return to the challenge list. |
 
-The booking steps belong in the same dialog. Booking must work from both the homepage and the page with all challenges. The time choices and participant limits must follow the API data. These are requirements from the assignment.
+The booking steps belong in the same dialog. Booking must work from both the homepage and the page with all challenges. The time choices and participant limits must follow the API data.
 
 ## Meetings
 
