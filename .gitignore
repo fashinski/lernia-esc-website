@@ -1,0 +1,21 @@
+# Files made by the operating system
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Personal editor settings and temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local environment settings
+.env
+.env.*
+!.env.example
+
+# Installed packages and npm logs, if we add tools later
+node_modules/
+npm-debug.log*
