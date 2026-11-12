@@ -72,6 +72,7 @@ The homepage still use placeholder cards without real challenge IDs, so this par
 
 I am keeping this as a draft for now. We still need to connect our parts and finish checking mobile layout, keyboard navigation and error cases.
 
+-------------------------------
 
 ## Screenshots so far
 
@@ -96,6 +97,13 @@ I am keeping this as a draft for now. We still need to connect our parts and fin
 <img width="796" height="943" alt="Screenshot 2026-11-12 114227" src="https://github.com/user-attachments/assets/0928ec89-7365-4d08-b571-20d974621521" />
 
 <img width="1492" height="1006" alt="Screenshot 2026-11-12 112308" src="https://github.com/user-attachments/assets/690c03fe-aeac-4f69-a687-3cebb5b3d6c7" />
+
+--------------------------------
+
+## Slack message after the PR #1
+
+<img width="1067" height="810" alt="image" src="https://github.com/user-attachments/assets/0b7e590f-18e7-4a73-b159-f8868bdbed94" />
+
 
 
 
