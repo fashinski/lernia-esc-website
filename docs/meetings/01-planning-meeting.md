@@ -50,12 +50,13 @@ The assignment also requires everyone to write JavaScript and commit their own c
 
 Eli Fadi.
 
-##The end
+
+## The end
 -----------------------------------------------
 
 -----------------------------------------------
 
-##Notes for myself
+## Notes for myself
 
 I added booking step 1 and 2. The user can choose a date, see the available times from the API, and fill in their name, email and number of participants. The form can also send the booking to the API.
 
