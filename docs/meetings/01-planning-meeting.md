@@ -73,7 +73,7 @@ The homepage still use placeholder cards without real challenge IDs, so this par
 I am keeping this as a draft for now. We still need to connect our parts and finish checking mobile layout, keyboard navigation and error cases.
 
 
-**Screenshots so far**
+## Screenshots so far
 
 <img width="1147" height="881" alt="image" src="https://github.com/user-attachments/assets/9b3c1869-adf4-4833-975d-467e7cb5a28c" />
 
